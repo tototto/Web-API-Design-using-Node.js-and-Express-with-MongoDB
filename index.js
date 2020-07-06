@@ -203,13 +203,10 @@ app.use('/calculatePrice', (req, res) => {
                 }
                 else if(!results || !results.length){
                     if(index == m.size-1) res.json(apiResult);
-                    // if(Query.isEmptyObject(apiResult) == false){
-                    //     finalResults = apiResult;
-                    // }
+             
                 }
                 else{
-                    // console.log('Data for Current ID: ')
-                    // console.log(results);
+                   
                     var subItemObj = { item: key,
                                        qty: value,
                                        subtotal: (value * results[0].price)
@@ -217,24 +214,16 @@ app.use('/calculatePrice', (req, res) => {
                     apiResult.item = apiResult.item.concat(subItemObj);
                     apiResult.totalPrice = apiResult.totalPrice + (value * results[0].price);
                     ++index;
-                    // console.log('API Results is: ')
-                    // console.log(apiResult);
-                    //
-                    // if(Object.keys(apiResult).length != 0){
-                    //     console.log(Object.keys(apiResult).length != 0);
-                    //     finalResults = apiResult;
-                    // }
+                  
                     if(index == m.size) res.json(apiResult);
                 }
         });
     });
-    // console.log(finalResults);
-    // res.json(finalResults);
+   
 });
 
 app.listen(3000, () => {
     console.log('Listening on port 3000');
 });
 
-// Please do not delete the following line; we need it for testing!
 module.exports = app;
