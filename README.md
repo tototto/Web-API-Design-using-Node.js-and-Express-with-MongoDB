@@ -6,7 +6,7 @@ Built a Web API that allows applications to get information about the pets at th
 
 ## /findToy
 
-**Parameters:
+**Parameters:**
 id: >the ID of the Toy to find
 
 **Example usage: `/findToy?id=1234`
@@ -45,7 +45,7 @@ age: >the maximum age (exclusive) of the Animals to find
 
 # /calculatePrice
 
-**Parameters:**
+**Parameters: **
 id[i]: >the ID of the i>th Toy to include in the calculation
 qty[i]: >the quantity of the i>th Toy to include in the calculation
 
